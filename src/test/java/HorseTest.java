@@ -1,17 +1,13 @@
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Timeout;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.mockito.MockedStatic;
 import org.mockito.Mockito;
 
-import java.util.concurrent.TimeUnit;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.ArgumentMatchers.anyDouble;
 
-//@Timeout(value = 100, unit = TimeUnit.MILLISECONDS)
 class HorseTest {
 
     @Test
@@ -156,7 +152,7 @@ class HorseTest {
         double getRandomDoubleFakeResult = 0.5;
         Horse horse = new Horse(name, speed, distance);
         try (MockedStatic<Horse> horseMockedStatic = Mockito.mockStatic(Horse.class)) {
-            horseMockedStatic.when(()-> Horse.getRandomDouble(anyDouble(), anyDouble())).thenReturn(getRandomDoubleFakeResult);
+            horseMockedStatic.when(() -> Horse.getRandomDouble(anyDouble(), anyDouble())).thenReturn(getRandomDoubleFakeResult);
             horse.move();
         }
         double expected = distance + speed * getRandomDoubleFakeResult;

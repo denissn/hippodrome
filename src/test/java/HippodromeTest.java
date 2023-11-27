@@ -74,14 +74,14 @@ class HippodromeTest {
     @Test
     void getWinner_ShouldReturnsHorseWithLongestDistance() {
         List<Horse> horses = List.of(
-                new Horse("horse_0",3.1,4),
-                new Horse("horse_1",2.2,2),
-                new Horse("horse_2",2.8,3)
+                new Horse("horse_0", 3.1, 4),
+                new Horse("horse_1", 2.2, 2),
+                new Horse("horse_2", 2.8, 3)
         );
         Hippodrome hippodrome = new Hippodrome(horses);
 
         double expected = 4;
         double actual = hippodrome.getWinner().getDistance();
-        assertEquals(expected, actual );
+        assertEquals(expected, actual);
     }
 }
