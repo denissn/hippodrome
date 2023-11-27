@@ -91,7 +91,7 @@ class HorseTest {
     }
 
     @Test
-    void getName_ShouldReturnCorrectName() {
+    void getName_ShouldReturnsCorrectName() {
         String name = "TestHorse";
         double speed = 2.5;
         Horse horse = new Horse(name, speed);
@@ -102,7 +102,7 @@ class HorseTest {
     }
 
     @Test
-    void getSpeed_ShouldReturnCorrectSpeed() {
+    void getSpeed_ShouldReturnsCorrectSpeed() {
         String name = "TestHorse";
         double speed = 2.5;
         Horse horse = new Horse(name, speed);
@@ -114,7 +114,7 @@ class HorseTest {
 
 
     @Test
-    void getDistance_ShouldReturnCorrectDistance() {
+    void getDistance_ShouldReturnsCorrectDistance() {
         String name = "TestHorse";
         double speed = 2.5;
         double distance = 2.5;
@@ -126,7 +126,7 @@ class HorseTest {
     }
 
     @Test
-    void getDistance_ShouldReturnCorrectDistanceIfConstructorWithoutDistance() {
+    void getDistance_ShouldReturnsCorrectDistanceIfConstructorWithoutDistance() {
         String name = "TestHorse";
         double speed = 2.5;
         Horse horse = new Horse(name, speed);
@@ -137,7 +137,7 @@ class HorseTest {
     }
 
     @Test
-    void move_shouldCallGetRandomDoubleWithCorrectParams() {
+    void move_ShouldCallGetRandomDoubleWithCorrectParams() {
         String name = "TestHorse";
         double speed = 2.5;
         double distance = 2.5;
@@ -149,7 +149,7 @@ class HorseTest {
     }
 
     @Test
-    void move_shouldReturnCorrectDistanceWithMockGetRandomDouble() {
+    void move_ShouldReturnsCorrectDistanceWithMockGetRandomDouble() {
         String name = "TestHorse";
         double speed = 2.5;
         double distance = 1.5;
