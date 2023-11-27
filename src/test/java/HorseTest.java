@@ -48,7 +48,7 @@ class HorseTest {
 
     @Test
     void constructor_NegativeSpeed_ThrowsIllegalArgumentException() {
-        String name = "TestHorse";
+        String name = "horse";
         double speed = -2.5;
 
         assertThrows(IllegalArgumentException.class, () -> new Horse(name, speed));
@@ -56,7 +56,7 @@ class HorseTest {
 
     @Test
     void constructor_NegativeSpeed_ExpectedExceptionMessageSpeedCannotBeNegative() {
-        String name = "TestHorse";
+        String name = "horse";
         double speed = -2.5;
         Exception exception = assertThrows(IllegalArgumentException.class, () -> new Horse(name, speed));
 
@@ -67,7 +67,7 @@ class HorseTest {
 
     @Test
     void constructor_NegativeDistance_ThrowsIllegalArgumentException() {
-        String name = "TestHorse";
+        String name = "horse";
         double speed = 2.5;
         double distance = -1;
 
@@ -76,7 +76,7 @@ class HorseTest {
 
     @Test
     void constructor_NegativeDistance_ExpectedExceptionMessageDistanceCannotBeNegative() {
-        String name = "TestHorse";
+        String name = "horse";
         double speed = 2.5;
         double distance = -1;
         Exception exception = assertThrows(IllegalArgumentException.class, () -> new Horse(name, speed, distance));
@@ -88,18 +88,18 @@ class HorseTest {
 
     @Test
     void getName_ShouldReturnsCorrectName() {
-        String name = "TestHorse";
+        String name = "horse";
         double speed = 2.5;
         Horse horse = new Horse(name, speed);
 
-        String expected = "TestHorse";
+        String expected = "horse";
         String actual = horse.getName();
         assertEquals(expected, actual);
     }
 
     @Test
     void getSpeed_ShouldReturnsCorrectSpeed() {
-        String name = "TestHorse";
+        String name = "horse";
         double speed = 2.5;
         Horse horse = new Horse(name, speed);
 
@@ -111,7 +111,7 @@ class HorseTest {
 
     @Test
     void getDistance_ShouldReturnsCorrectDistance() {
-        String name = "TestHorse";
+        String name = "horse";
         double speed = 2.5;
         double distance = 2.5;
         Horse horse = new Horse(name, speed, distance);
@@ -123,7 +123,7 @@ class HorseTest {
 
     @Test
     void getDistance_ShouldReturnsCorrectDistanceIfConstructorWithoutDistance() {
-        String name = "TestHorse";
+        String name = "horse";
         double speed = 2.5;
         Horse horse = new Horse(name, speed);
 
@@ -134,7 +134,7 @@ class HorseTest {
 
     @Test
     void move_ShouldCallGetRandomDoubleWithCorrectParams() {
-        String name = "TestHorse";
+        String name = "horse";
         double speed = 2.5;
         double distance = 2.5;
         Horse horse = new Horse(name, speed, distance);
@@ -146,7 +146,7 @@ class HorseTest {
 
     @Test
     void move_ShouldReturnsCorrectDistanceWithMockGetRandomDouble() {
-        String name = "TestHorse";
+        String name = "horse";
         double speed = 2.5;
         double distance = 1.5;
         double getRandomDoubleFakeResult = 0.5;
